@@ -62,22 +62,22 @@
 The workflow integrates multiple components inside n8n:
     • Chat Input → Handles user queries and starts AI-agentic interactions.
     
-    • OpenAI Chat Model (GPT-4o-mini) → Provides natural language reasoning and conversational orchestration.
+    • OpenAI Chat Model (GPT-4o-mini) 🠊 Provides natural language reasoning and conversational orchestration.
     
-    • Simple Memory → Maintains short-term conversational state.
+    • Simple Memory 🠊 Maintains short-term conversational state.
     
-    • Google Calendar Tools →
+    • Google Calendar Tools 🠊
         ◦ Get Availability: Finds open time slots.
         
         ◦ Create Events: Books events once confirmed.
         
-    • Pinecone Vector Store → Stores and retrieves vectorized enterprise documents for semantic search.
+    • Pinecone Vector Store 🠊 Stores and retrieves vectorized enterprise documents for semantic search.
     
-    • OpenAI Embeddings → Generates embeddings that power Pinecone search and retrieval.
+    • OpenAI Embeddings 🠊 Generates embeddings that power Pinecone search and retrieval.
 
 
 📂 Repository Contents
-    • Multi_fucntional_Agentic_AI.json → The exported n8n workflow file.
+    • Multi_fucntional_Agentic_AI.json 🠊 The exported n8n workflow file.
 
 ### How to Integrate the Project Into Your Enterprise Workflow 🚀 
 * 1. Clone the Repository
@@ -87,18 +87,18 @@ cd <your-repo-name>
 * 2. Import into n8n
     1. Open your local or hosted n8n instance.
        
-    2. Go to Workflows → Import from File.
+    2. Go to Workflows 🠊 Import from File.
        
     3. Upload Multi_fucntional_Agentic_AI.json.
        
 * 3. Configure Credentials
 The workflow requires valid API keys and credentials:
 
-    • OpenAI API Key → for chat and embeddings.
+    • OpenAI API Key 🠊 for chat and embeddings.
    
-    • Pinecone API Key → for vector storage.
+    • Pinecone API Key 🠊 for vector storage.
    
-    • Google Calendar OAuth → for event scheduling and availability lookup.
+    • Google Calendar OAuth 🠊 for event scheduling and availability lookup.
    
 * Set these up under n8n → Credentials.
 
@@ -111,45 +111,91 @@ The workflow requires valid API keys and credentials:
 
 
 ### Example Use Cases for Enterprise Workflows 💡 
-    • Enterprise Data Management → Upload and retrieve business documents, knowledge bases, or policies from Pinecone.
+    • Enterprise Data Management 🠊 Upload and retrieve business documents, knowledge bases, or policies from Pinecone.
     
-    • Calendar Assistant → Schedule client meetings, team syncs, or enterprise events automatically.
+    • Calendar Assistant 🠊 Schedule client meetings, team syncs, or enterprise events automatically.
     
-    • Knowledge Querying → Ask questions against stored enterprise repositories.
+    • Knowledge Querying 🠊 Ask questions against stored enterprise repositories.
     
-    • Multimodal Extensions (Future) → Integrate with email, Slack, Teams, or CRMs for broader enterprise adoption.
+    • Multimodal Extensions (Future) 🠊 Integrate with email, Slack, Teams, or CRMs for broader enterprise adoption.
     
 ---
 
 ### How the Agent was Designed  💡 
 
-* Start with this workflow:
-* 
-  Details regarding how to design the workflow could be obtained here: https://github.com/manuelbomi/Enterprise-Agentic-AI---Scalable-Meeting-Orchestration-with-n8n
+#### If you decide to use n8n to design the Agent in a step-by-step fashion as opposed to cloning this repository, then do the following:
+
+#### * Start with this workflow:
+  
+  Details regarding how to design the starter workflow could be obtained here: https://github.com/manuelbomi/Enterprise-Agentic-AI---Scalable-Meeting-Orchestration-with-n8n
   
 <img width="1366" height="768" alt="1 start with this workflow" src="https://github.com/user-attachments/assets/2e9fc90d-7c7e-48e2-ac2e-8a0ac6fb6713" />
 
+---
+
+#### After completing the starter workflow, then look for vector store tool
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/a408d849-9cd0-4da8-9075-c6156378df95" />
+
+#### Tool description
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/0bd47825-0755-4b12-b624-5c97b9712d2c" />
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/84d9f262-1be1-44f2-9c91-ce2191a3c984" />
+
+---
+
+#### Select Pinecone Namespace
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/7354a6f2-1360-41cd-ac6d-0bc1a5821e7c" />
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/43e5ca44-3060-412c-947b-43b25c0d2d3a" />
+
+---
+
+#### Click on embeddings and select embeddings open ai
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/378e2921-f363-4174-be5b-fc8f3248cb42" />
+
+---
+
+#### Select the test embeddings 3 small
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/3e86cbb9-8959-40a9-a00c-70e7f0b0b1ac" />
+
+---
+
+#### Start using the Agent to answer questions and schedule meetings:
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/4562fa07-24a5-400b-aca2-48b242d81686" />
+
+---
+
+
 
 ### Scalability & Extensions for Additional Enterprise Workflows 🔧 
-This system is designed to scale into multi-domain enterprise AI orchestration:
 
-    • Additional Enterprise Data Sources → Connect Google Drive, Notion, Confluence, or internal databases.
+#### This system is designed to scale into multi-domain enterprise AI orchestration:
+
+    • Additional Enterprise Data Sources 🠊 Connect Google Drive, Notion, Confluence, or internal databases.
     
-    • More Vector Databases → Swap Pinecone with alternatives like Weaviate, Milvus, or ChromaDB.
+    • More Vector Databases 🠊 Swap Pinecone with alternatives like Weaviate, Milvus, or ChromaDB.
     
-    • Event Coordination Extensions → Integrate with Outlook, Teams, or Zoom APIs.
+    • Event Coordination Extensions 🠊 Integrate with Outlook, Teams, or Zoom APIs.
     
-    • Advanced Agentic Patterns → Chain multiple AI agents for specialized tasks (e.g., finance, HR, compliance).
+    • Advanced Agentic Patterns 🠊 Chain multiple AI agents for specialized tasks (e.g., finance, HR, compliance).
     
-    • Deployment Options →
+    • Deployment Options 🠊
+    
         ◦ Run in Dockerized n8n for enterprise DevOps.
         
         ◦ Deploy behind enterprise SSO & security gateways.
         
         ◦ Integrate with Kubernetes clusters for high availability.
 
+---
+
 ### How to Deploy in Enterprise Settings 🏢 :
-For enterprise use, this workflow can be:
+
+#### For enterprise use, this workflow can be:
+
     • Dockerized and deployed in cloud platforms (AWS, GCP, Azure).
     
     • Secured with API gateways and role-based access control.
@@ -158,9 +204,35 @@ For enterprise use, this workflow can be:
     
     • Monitored with observability tools for scaling and reliability.
 
-
+---
     
 📜 License
 This project is released under the MIT License.
+
+
+Thank you for reading 
+
+---
+
+
+### **AUTHOR'S BACKGROUND**
+### Author's Name:  Emmanuel Oyekanlu
+```
+Skillset:   I have experience spanning several years in data science, developing scalable enterprise data pipelines,
+enterprise solution architecture, architecting enterprise systems data and AI applications,
+software and AI solution design and deployments, data engineering, high performance computing (GPU, CUDA), machine learning,
+NLP, Agentic-AI and LLM applications as well as deploying scalable solutions (apps) on-prem and in the cloud.
+
+I can be reached through: manuelbomi@yahoo.com
+
+Websites (professional):  http://emmanueloyekanlu.com/
+Websites (application):  https://app.emmanueloyekanluprojects.com/
+Publications:  https://scholar.google.com/citations?user=S-jTMfkAAAAJ&hl=en
+LinkedIn:  https://www.linkedin.com/in/emmanuel-oyekanlu-6ba98616
+Github:  https://github.com/manuelbomi
+
+```
+[![Icons](https://skillicons.dev/icons?i=aws,azure,gcp,scala,mongodb,redis,cassandra,kafka,anaconda,matlab,nodejs,django,py,c,anaconda,git,github,mysql,docker,kubernetes&theme=dark)](https://skillicons.dev)
+
 
 
