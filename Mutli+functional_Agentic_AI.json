@@ -1,0 +1,288 @@
+{
+  "name": "Multi_fucntional_Agentic_AI",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -256,
+        -96
+      ],
+      "id": "7d21dff7-f3e4-4fce-913b-96af98a24b41",
+      "name": "chat input",
+      "webhookId": "e0fe3f59-a93e-4e9d-acdc-d796e452a710",
+      "notesInFlow": true,
+      "notes": "This is how my agent starts a conversation"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "=You are to serve in the role of my calendar assistant.\n\nYour duty is to add things to available timeslot on my calendar.\n\nToday's date is: \n\nYou will have tools that will allow you to find empty time slots first. After, you will create new events once you have confirmed the time slots with me\n\nTodays date is: {{ (() => {\n  return DateTime.now().setZone('America/New_York').toFormat('yyyy-LL-dd HH:mm:ss ZZZZ');\n})() }}"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -80,
+        -128
+      ],
+      "id": "783d9bb5-1b59-4fe4-b861-72fafb0c9c23",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -240,
+        64
+      ],
+      "id": "c6f1c4aa-b8e0-4163-8c69-3331b25376e9",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "U1fXSgYSAnA9Ofdo",
+          "name": "N8N Agent"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -112,
+        80
+      ],
+      "id": "e01dfde8-65cc-434d-9370-c181a4f60e23",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Tool to search for available time slot",
+        "resource": "calendar",
+        "calendar": {
+          "__rl": true,
+          "value": "manuelbomi@gmail.com",
+          "mode": "list",
+          "cachedResultName": "manuelbomi@gmail.com"
+        },
+        "timeMin": "={{ $fromAI('start_time')}}",
+        "timeMax": "={{ $fromAI('end_time')}}",
+        "options": {
+          "outputFormat": "raw",
+          "timezone": {
+            "__rl": true,
+            "value": "EST",
+            "mode": "list",
+            "cachedResultName": "EST"
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        160
+      ],
+      "id": "500537df-1db5-4d09-ae09-d3e878507c26",
+      "name": "Get availability in a calendar in Google Calendar",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "cgj2oZp8wy0AjA9D",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Create an event in Google Calendar",
+        "calendar": {
+          "__rl": true,
+          "value": "manuelbomi@gmail.com",
+          "mode": "list",
+          "cachedResultName": "manuelbomi@gmail.com"
+        },
+        "start": "={{ $fromAI('start_date') }}",
+        "end": "={{ $fromAI('end_date') }}",
+        "additionalFields": {
+          "description": "={{ $fromAI('description') }}",
+          "summary": "={{ $fromAI('summary') }}"
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendarTool",
+      "typeVersion": 1.3,
+      "position": [
+        208,
+        64
+      ],
+      "id": "554541a1-a2df-487b-b07e-dae3861f0ff9",
+      "name": "Create Events",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "cgj2oZp8wy0AjA9D",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolDescription": "Retrieve documents from vector store",
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "n8n-agentic-ai-5",
+          "mode": "list",
+          "cachedResultName": "n8n-agentic-ai-5"
+        },
+        "options": {
+          "pineconeNamespace": "n8n-agentic-ai.5"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "position": [
+        272,
+        -128
+      ],
+      "id": "c76e11da-677c-486e-b352-730b6914ed44",
+      "name": "Pinecone Vector Store",
+      "credentials": {
+        "pineconeApi": {
+          "id": "5gFWe08EgkvrtV7O",
+          "name": "PineconeApi account 5"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        368,
+        80
+      ],
+      "id": "e63a7451-1f9c-4d37-96b4-a97097379291",
+      "name": "Embeddings OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "U1fXSgYSAnA9Ofdo",
+          "name": "N8N Agent"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "chat input": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get availability in a calendar in Google Calendar": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Events": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "5c9b2dc1-7c47-45fb-9969-f4688a670bcf",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2a3fffec960c1da24379e9be1ef5b1aff33ac5ebedbecb2b8fce1d4cd99130a9"
+  },
+  "id": "cLt0FDk0IN1kvoi9",
+  "tags": [
+    {
+      "createdAt": "2025-08-12T18:19:19.866Z",
+      "updatedAt": "2025-08-12T18:19:19.866Z",
+      "id": "wprcK1s0fTnlkc55",
+      "name": "Multifucntional Agentic AI"
+    }
+  ]
+}
