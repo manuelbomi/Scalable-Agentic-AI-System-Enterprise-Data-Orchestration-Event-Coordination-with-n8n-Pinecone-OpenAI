@@ -76,22 +76,22 @@ The workflow integrates multiple components inside n8n:
     • OpenAI Embeddings 🠊 Generates embeddings that power Pinecone search and retrieval.
 
 
-📂 Repository Contents
-    • Multi_fucntional_Agentic_AI.json 🠊 The exported n8n workflow file.
-
 ### How to Integrate the Project Into Your Enterprise Workflow 🚀 
-* 1. Clone the Repository
+
+#### 1. Clone the Repository
 git clone https://github.com/<your-username>/<your-repo-name>.git
 cd <your-repo-name>
 
-* 2. Import into n8n
-    1. Open your local or hosted n8n instance.
+#### 2. Import into n8n
+     
+   * Open your local or hosted n8n instance.
        
-    2. Go to Workflows 🠊 Import from File.
+   * Go to Workflows 🠊 Import from File.
        
-    3. Upload Multi_fucntional_Agentic_AI.json.
+   * Upload Multi_fucntional_Agentic_AI.json.
        
-* 3. Configure Credentials
+#### 3. Configure Credentials
+
 The workflow requires valid API keys and credentials:
 
     • OpenAI API Key 🠊 for chat and embeddings.
@@ -100,9 +100,10 @@ The workflow requires valid API keys and credentials:
    
     • Google Calendar OAuth 🠊 for event scheduling and availability lookup.
    
-* Set these up under n8n → Credentials.
+* Set these up under n8n 🠊 Credentials.
 
-* 5. Run the Workflow
+####  5. Run the Workflow
+
     • Activate the workflow.
    
     • Open the chat interface.
@@ -111,6 +112,7 @@ The workflow requires valid API keys and credentials:
 
 
 ### Example Use Cases for Enterprise Workflows 💡 
+
     • Enterprise Data Management 🠊 Upload and retrieve business documents, knowledge bases, or policies from Pinecone.
     
     • Calendar Assistant 🠊 Schedule client meetings, team syncs, or enterprise events automatically.
@@ -125,7 +127,7 @@ The workflow requires valid API keys and credentials:
 
 #### If you decide to use n8n to design the Agent in a step-by-step fashion as opposed to cloning this repository, then do the following:
 
-#### * Start with this workflow:
+####  Start with this workflow:
   
   Details regarding how to design the starter workflow could be obtained here: https://github.com/manuelbomi/Enterprise-Agentic-AI---Scalable-Meeting-Orchestration-with-n8n
   
