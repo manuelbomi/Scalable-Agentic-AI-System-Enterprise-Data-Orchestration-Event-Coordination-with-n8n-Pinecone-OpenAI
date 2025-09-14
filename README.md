@@ -1,6 +1,7 @@
 # Scalable Agentic AI System: Enterprise Data Orchestration & Event Coordination with n8n, Pinecone & OpenAI
 
 ### Overview 📌 
+
 #### This repository contains a multifunctional Agentic AI workflow built in n8n. The system leverages OpenAI, Pinecone, and Google Calendar to provide enterprise-ready orchestration across two core functions:
     1. Enterprise Data Orchestration
     
