@@ -129,7 +129,7 @@ The workflow requires valid API keys and credentials:
 
 ####  Start with this workflow:
   
-  Details regarding how to design the starter workflow could be obtained here: https://github.com/manuelbomi/Enterprise-Agentic-AI---Scalable-Meeting-Orchestration-with-n8n
+  https://github.com/manuelbomi/Enterprise-Agentic-AI---Scalable-Meeting-Orchestration-with-n8n
   
 <img width="1366" height="768" alt="1 start with this workflow" src="https://github.com/user-attachments/assets/2e9fc90d-7c7e-48e2-ac2e-8a0ac6fb6713" />
 
