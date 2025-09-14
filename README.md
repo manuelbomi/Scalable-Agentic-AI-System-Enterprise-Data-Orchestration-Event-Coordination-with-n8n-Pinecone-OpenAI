@@ -127,9 +127,7 @@ The workflow requires valid API keys and credentials:
 
 #### If you decide to use n8n to design the Agent in a step-by-step fashion as opposed to cloning this repository, then do the following:
 
-####  Start with this workflow:
-  
-  https://github.com/manuelbomi/Enterprise-Agentic-AI---Scalable-Meeting-Orchestration-with-n8n
+####  Start with this workflow here: https://github.com/manuelbomi/Enterprise-Agentic-AI---Scalable-Meeting-Orchestration-with-n8n
   
 <img width="1366" height="768" alt="1 start with this workflow" src="https://github.com/user-attachments/assets/2e9fc90d-7c7e-48e2-ac2e-8a0ac6fb6713" />
 
