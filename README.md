@@ -47,6 +47,7 @@
 ---
 
   * (2) Can Coordinate Events Such As Scheduling Meetings
+    
     <img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/fb5a2144-8bfb-4d53-acdb-1f69c3124d73" />
     
     <img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/60b169b0-bcc8-4c6a-82b9-69ceca1e55f0" />
