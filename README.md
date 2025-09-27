@@ -79,7 +79,7 @@ The workflow integrates multiple components inside n8n:
 ### How to Integrate the Project Into Your Enterprise Workflow 🚀 
 
 #### 1. Clone the Repository
-git clone https://github.com/<your-username>/<your-repo-name>.git
+git clone https://github.com/manuelbomi/Scalable-Agentic-AI-System-Enterprise-Data-Orchestration-Event-Coordination-with-n8n-Pinecone-OpenAI
 cd <your-repo-name>
 
 #### 2. Import into n8n
