@@ -1,6 +1,6 @@
 # Scalable Agentic AI System: Enterprise Data Orchestration & Event Coordination with n8n, Pinecone & OpenAI
 
-### Overview 📌 
+### Overview  
 
 #### This repository contains a multifunctional Agentic AI workflow built in n8n. The system leverages OpenAI, Pinecone, and Google Calendar to provide enterprise-ready orchestration across two core functions:
     1. Enterprise Data Orchestration
@@ -58,7 +58,7 @@
 
   
 
-### System Architecture   ⚙️ 
+### System Architecture    
 The workflow integrates multiple components inside n8n:
     • Chat Input → Handles user queries and starts AI-agentic interactions.
     
@@ -76,7 +76,7 @@ The workflow integrates multiple components inside n8n:
     • OpenAI Embeddings 🠊 Generates embeddings that power Pinecone search and retrieval.
 
 
-### How to Integrate the Project Into Your Enterprise Workflow 🚀 
+### How to Integrate the Project Into Your Enterprise Workflow  
 
 #### 1. Clone the Repository
 git clone https://github.com/manuelbomi/Scalable-Agentic-AI-System-Enterprise-Data-Orchestration-Event-Coordination-with-n8n-Pinecone-OpenAI
@@ -111,7 +111,7 @@ The workflow requires valid API keys and credentials:
     • Start interacting with the AI agent.
 
 
-### Example Use Cases for Enterprise Workflows 💡 
+### Example Use Cases for Enterprise Workflows  
 
     • Enterprise Data Management 🠊 Upload and retrieve business documents, knowledge bases, or policies from Pinecone.
     
@@ -123,7 +123,7 @@ The workflow requires valid API keys and credentials:
     
 ---
 
-### How the Agent was Designed  💡 
+### How the Agent was Designed   
 
 #### If you decide to use n8n to design the Agent in a step-by-step fashion as opposed to cloning this repository, then do the following:
 
@@ -192,7 +192,7 @@ The workflow requires valid API keys and credentials:
 
 ---
 
-### How to Deploy in Enterprise Settings 🏢 :
+### How to Deploy in Enterprise Settings  :
 
 #### For enterprise use, this workflow can be:
 
@@ -206,7 +206,7 @@ The workflow requires valid API keys and credentials:
 
 ---
     
-📜 License
+License
 This project is released under the MIT License.
 
 
